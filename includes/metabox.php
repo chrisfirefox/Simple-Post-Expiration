@@ -25,8 +25,8 @@ function pw_spe_add_expiration_field() {
 		$expires = get_post_meta( $post->ID, 'pw_spe_expiration', true );
 	}
 
-	$label = ! empty( $expires ) ? date_i18n( 'Y-n-d', strtotime( $expires ) ) : __( 'never', 'pw-spe' );
-	$date  = ! empty( $expires ) ? date_i18n( 'Y-n-d', strtotime( $expires ) ) : '';
+	$label = ! empty( $expires ) ? date_i18n( get_option( 'date_format' ), strtotime( $expires ) ) : __( 'never', 'pw-spe' );
+	$date  = ! empty( $expires ) ? date_i18n( get_option( 'date_format' ), strtotime( $expires ) ) : '';
 ?>
 	<div id="pw-spe-expiration-wrap" class="misc-pub-section">
 		<span>
