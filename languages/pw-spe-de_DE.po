@@ -1,0 +1,92 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Simple Post Expiration\n"
+"POT-Creation-Date: 2014-08-19 17:00-0600\n"
+"PO-Revision-Date: 2018-04-11 10:53+0100\n"
+"Last-Translator: \n"
+"Language-Team: Pippin's Plugins <pippin@pippinsplugins.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.4\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e;_n;_x\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: de_DE\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../simple-post-expiration.php:69 ../includes/settings.php:12
+msgid "Expired:"
+msgstr "Abgelaufen:"
+
+#: ../includes/settings.php:6
+msgid "Expired Item Prefix"
+msgstr "Prefix für abgelaufenen Eintrag"
+
+#: ../includes/settings.php:14
+msgid "Enter the text you would like prepended to expired items."
+msgstr ""
+"Geben Sie den Text dein, der einem abgelaufenen Eintrag im Titel "
+"vorangestellt werden soll."
+
+#: ../includes/shortcodes.php:6
+#, php-format
+msgid "This item expires on: %s"
+msgstr "Dieser Eintrag ist abgelaufen am: %s"
+
+#: ../includes/shortcodes.php:7
+#, php-format
+msgid "This item expired on %s"
+msgstr "Dieser Einträg läuft ab am %s"
+
+#: ../includes/widgets.php:11
+msgid "Expired / Expiring Posts"
+msgstr "Abgelaufene / Ablaufende Einträge"
+
+#: ../includes/widgets.php:11
+msgid "Display a list of expired or expiring soon posts"
+msgstr "Zeige eine Liste aller abgelaufenen und bald ablaufenden Einträge"
+
+#: ../includes/widgets.php:90
+msgid "Title:"
+msgstr "Titel:"
+
+#: ../includes/widgets.php:95
+msgid "Type:"
+msgstr "Typ:"
+
+#: ../includes/widgets.php:98
+msgid "Expiring Soon"
+msgstr "Läuft bald ab"
+
+#: ../includes/widgets.php:102
+msgid "Expired"
+msgstr "Abgelaufen"
+
+#: ../includes/widgets.php:107
+msgid "Number to Show:"
+msgstr "Einträge pro Seite:"
+
+#: ../includes/metabox.php:11
+msgid "never"
+msgstr "nie"
+
+#: ../includes/metabox.php:18
+msgid "Expires:"
+msgstr "Läuft ab:"
+
+#: ../includes/metabox.php:22
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: ../includes/metabox.php:23
+msgid "Edit date and time"
+msgstr "Datum und Uhrzeit bearbeiten"
+
+#: ../includes/metabox.php:30
+msgid "OK"
+msgstr "Ok"
+
+#: ../includes/metabox.php:31
+msgid "Cancel"
+msgstr "Abbrechen"
