@@ -101,3 +101,32 @@ function pw_spe_filter_title( $title = '', $post_id = 0 ) {
 
 }
 add_filter( 'the_title', 'pw_spe_filter_title', 100, 2 );
+
+if ( ! wp_next_scheduled( 'pw_spe_expire_entries' ) && ! wp_installing() )
+	wp_schedule_event( strtotime('today midnight'), 'daily', 'pw_spe_expire_entries');
+
+add_action( 'pw_spe_expire_entries', 'scheduled_expire_entries' );
+function scheduled_expire_entries() {
+	$query_args = array(
+		'post_type'       => 'any',
+		'orderby'         => 'meta_value',
+		'meta_key'        => 'pw_spe_expiration',
+		'posts_per_page'  => -1,
+		'meta_query'      => array(
+			array(
+				'key'     => 'pw_spe_expiration',
+				'value'   => date( 'Y-n-d', current_time( 'timestamp' ) ),
+				'compare' => '<',
+				'type'    => 'DATETIME'
+			)
+		)
+	);
+
+	$items = get_posts( $query_args );
+	foreach( $items as $p ) {
+		$p->post_status = "draft";
+		wp_update_post( $p, false );
+	}
+}
+
+// add_action( 'admin_init', 'scheduled_expire_entries' );
